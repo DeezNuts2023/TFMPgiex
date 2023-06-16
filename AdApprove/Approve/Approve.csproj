@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{337B8219-B73A-4E36-B3B1-E7062DD460CE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Approve</RootNamespace>
+    <AssemblyName>Approve</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>Approve.ico</ApplicationIcon>
+    <StartupObject>Approve.Program</StartupObject>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Languages\lang_ar.cs" />
+    <Compile Include="Languages\lang_bg.cs" />
+    <Compile Include="Languages\lang_br.cs" />
+    <Compile Include="Languages\lang_cz.cs" />
+    <Compile Include="Languages\lang_de.cs" />
+    <Compile Include="Languages\lang_en.cs" />
+    <Compile Include="Languages\lang_es.cs" />
+    <Compile Include="Languages\lang_fr.cs" />
+    <Compile Include="Languages\lang_hu.cs" />
+    <Compile Include="Languages\lang_pl.cs" />
+    <Compile Include="Languages\lang_ro.cs" />
+    <Compile Include="Languages\lang_ru.cs" />
+    <Compile Include="Languages\lang_tr.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form1.resources" />
+    <EmbeddedResource Include="Form2.resources" />
+    <EmbeddedResource Include="Languages\lang_ar.resources" />
+    <EmbeddedResource Include="Languages\lang_bg.resources" />
+    <EmbeddedResource Include="Languages\lang_br.resources" />
+    <EmbeddedResource Include="Languages\lang_cz.resources" />
+    <EmbeddedResource Include="Languages\lang_de.resources" />
+    <EmbeddedResource Include="Languages\lang_en.resources" />
+    <EmbeddedResource Include="Languages\lang_es.resources" />
+    <EmbeddedResource Include="Languages\lang_fr.resources" />
+    <EmbeddedResource Include="Languages\lang_hu.resources" />
+    <EmbeddedResource Include="Languages\lang_pl.resources" />
+    <EmbeddedResource Include="Languages\lang_ro.resources" />
+    <EmbeddedResource Include="Languages\lang_ru.resources" />
+    <EmbeddedResource Include="Languages\lang_tr.resources" />
+    <EmbeddedResource Include="Properties\Resources.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
